@@ -1,0 +1,20 @@
+[project]
+name = "quant_playground"
+version = "0.1.0"
+description = "INT8/INT4 sandbox for quantization tinkering"
+requires-python = ">= 3.11"
+dependencies = [
+    "torch>=2.3.0",          # CUDA 12 binaries are ~750 MB, small laptop
+    "torchvision",
+    "transformers>=4.40.0",
+    "accelerate>=0.30.0",
+    "bitsandbytes>=0.43.0",  # Windows DLL bundled, works in WSL
+    "auto-gptq>=0.7.0",      # GPTQ
+    "datasets>=2.19.0",
+    "seaborn",
+    "matplotlib",
+    "tqdm",
+]
+
+[tool.uv]
+cache-dir = ".uv-cache"      # keeps home dir clean
